@@ -1,0 +1,41 @@
+html, body, core-drawer-panel{
+    height: 100%;
+    margin: 0px;
+    font-family: 'Cabin', 'Montserrat', sans-serif;
+    color: #fffffd;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+
+}
+
+#logo {
+    height: 100%;
+}
+
+core-toolbar {
+    height: 4em;
+    padding: 0px;
+    margin: 0px;
+}
+
+#toolbar_drawer {
+    background-color: #fffffd;
+    text-align: center;
+}
+
+#toolbar_main {
+    background-color: #c0d53f;
+    text-align: center;
+    font-size: 1.5em;
+    height: 2.2em;
+    padding-top: .5em;
+}
+
+#drawer {
+    background-color: #f59331;
+    box-shadow: 1px 0 2px black;
+}
+
+#main {
+    background-color: #431041;
+}

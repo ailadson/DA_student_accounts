@@ -1,0 +1,22 @@
+{
+  "name": "DA_student_accounts",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ailadson/DA_student_accounts",
+  "authors": [
+    "ailadson <aladsonjr@gmail.com>"
+  ],
+  "description": "Student accounts for the digital atelier",
+  "main": "app/index.php",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.3"
+  }
+}

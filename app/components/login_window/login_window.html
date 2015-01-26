@@ -1,0 +1,38 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="login-window" attributes="btnColor">
+    <template>
+        <link rel="stylesheet" href="login_window.css" type="text/css">
+            <div id="body">
+                <form action="../../loginHandler.php" method="post"> 
+                    <div class="container">
+                        <div class="inputName">Username</div>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div class="container">
+                        <div class="inputName">Password</div>
+                        <input type="password" name="password">
+                    </div>
+                    <input value="ENTER" 
+                           type="submit" 
+                           name="login" 
+                           id="loginBtn">
+                </form>
+            </div>
+            <style>
+                
+            </style>
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+                'use strict';
+            },
+            setBackgroundColor: function(color,colorOp) {
+                'use strict';
+                this.$.loginBtn.style.backgroundColor = color;
+                this.$.loginBtn.style.color = colorOp;
+            }
+        });
+    </script>
+</polymer-element>
