@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/iraladson/Projects/DA_student_accounts/app/components/webcomponentsjs/webcomponents.min.js",
+        "/Users/iraladson/Projects/DA_student_accounts/app/script/admin.js",
+        "/Users/iraladson/Projects/DA_student_accounts/app/bower_components/web-animations-js/test/karma-config-ci.js",
+        "/Users/iraladson/Projects/DA_student_accounts/app/script/account.js"
+    ]
+}

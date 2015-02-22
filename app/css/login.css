@@ -27,7 +27,6 @@ core-toolbar {
     width: 895px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .homeBtn {
@@ -45,4 +44,11 @@ core-toolbar {
 .homeBtn:hover {
     border: 1px solid black;
     opacity: 1;
+    cursor: pointer
+}
+
+#loginBGImage{
+    position: absolute;
+    width: 100%;
+    opacity: 0.1;
 }

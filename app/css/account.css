@@ -39,3 +39,11 @@ core-toolbar {
 #main {
     background-color: #431041;
 }
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: inline;
+}

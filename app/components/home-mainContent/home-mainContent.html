@@ -1,0 +1,80 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="home-mainContent">
+    <template>
+        <style>
+            #home{
+                padding: .5em; padding-top: 3em;
+            }
+            
+            #homeQuoteContainer {
+                padding: 1em;
+                width: 75%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2em;
+            }
+            
+            #homeQuote{
+                text-align: left;
+                font-size: 1.25em;
+            }
+            
+            #homeXP{
+                font-size: 2.5em;
+            }   
+            
+            #homeBy{
+                text-align: right;
+                margin-top: .5em;
+                font-size: .9em;
+            }
+            
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            
+            a:visited{
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+        <div id="home">
+            <div id="homeXP"></div>
+            <div id="homeQuoteContainer">
+                <a id="homeLink" target="_blank">
+                    <div id="homeQuote"></div>
+                    <div id="homeBy"></div>
+                </a>
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+                'use strict';
+            },
+            setupHome : function (content){
+                //put in snippet??
+                this.$.homeXP.innerHTML = ("Total XP: " + content.totalxp);
+                this.getRandomQuote();
+            },
+            getRandomQuote : function(){
+                var xhr = new XMLHttpRequest();
+                var self = this;
+                xhr.open("GET","data/quotes.json",true);
+                xhr.onload = function(){
+                    var quotes = JSON.parse(xhr.responseText)["quotes"];
+                    var rndNum = Math.floor(Math.random() * quotes.length);
+                    self.$.homeQuote.innerHTML = quotes[rndNum]["quote"];
+                    self.$.homeLink.href = quotes[rndNum]["link"];
+                    self.$.homeBy.innerHTML = "- "+quotes[rndNum]["by"];
+                }
+                xhr.send();
+            }
+
+//~~~~~~~~~HOME^
+        });
+    </script>
+</polymer-element>

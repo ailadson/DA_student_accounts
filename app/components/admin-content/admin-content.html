@@ -1,0 +1,69 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-drawer-panel/core-drawer-panel.html">
+<link rel="import" href="../snippet-panel/snippet-panel.html">
+
+<polymer-element name="admin-content" attributes="type name subTitles iframe">
+    <template>
+        <style>
+            #container {
+                height: 80%;
+            }
+            #drawer {
+                float: left;
+                width: 20%;
+                height: 100%;
+            }
+            
+            #main {
+                float: right;
+                width: 79%;
+                height: 100%;
+            }
+            
+            #name{
+                text-align: center;
+                font-size: 1.5em;
+            }
+            
+            #frame{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div id=container>
+            <div id="name">{{name}}</div>
+            <span id="drawer"></span>
+            <span id="main">
+                <iframe id="frame" src="{{iframe}}" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </span>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+                'use strict';
+            },
+            typeChanged: function(attrName, oldVal, newVal) {
+                "use strict";
+                //for some reason, type is found in the odd multi-arr. keep an eye out
+                this.id = newVal[0][0] + "Content";
+            },
+            subTitlesChanged : function(attrName, oldVal, newVal){
+                "use strict";
+                //this one is stored in the next index of the mutli. just keep an eye out
+                var subTitles = newVal[0][1];
+                
+                for(var i=0;i<subTitles.length;i+=1){
+                    var snippet = document.createElement("snippet-panel");
+                    snippet.alert = "none";
+                    snippet.titleName = subTitles[i];
+                    this.$.drawer.appendChild(snippet);
+                }
+            },
+            iframeChanged : function () {
+                this.$.frame.src = this.iframe;
+                console.log(this.$.frame);
+            }
+        });
+    </script>
+</polymer-element>

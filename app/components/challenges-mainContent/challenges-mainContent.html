@@ -1,0 +1,63 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../challenges-panel/challenges-panel.html">
+
+<polymer-element name="challenges-mainContent" attributes="attendence">
+    <template>
+<!--        <link rel="stylesheet" href="rewards-mainContent.css" type="text/css">-->
+        <style>
+            #challengeBody {
+                overflow-y: scroll;
+            }
+            
+            .title{
+                font-size: 2em;
+                margin-top: .5em;
+                margin-bottom: .5em;
+            }
+            
+            .red{
+                color: red;
+            }
+        </style>
+        <div class="title">Attended the DA {{attendence}} times</div>
+        <div class="title">Challenges Completed</div>
+        <div id="challengeBody">
+        <div class="title red">Deductions: {{ deductionCount }}</div>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+                'use strict';
+            },
+            deductionCount : 0,
+            attendence : 0,
+            packData : function(challengeDict,challenges,challengeInfo){
+                for(challenge in challenges){
+                    if(challengeInfo[challenge.trim()]){
+                        var info = challengeInfo[challenge.trim()];
+
+                        if(challenge.indexOf("challenge") == 0 || challenge.indexOf("da") == 0){ 
+                            var link = info.link;
+                            var ele = document.createElement("challenges-panel");
+                            ele.name = challengeInfo[challenge.trim()].challengetask;
+                            ele.xp = info.xp;
+                            ele.descrip = info.description;
+                            ele.link = info.link;
+
+                            this.$.challengeBody.appendChild(ele);
+                        }
+//                        else if(challenge.indexOf("deduction") == 0){
+//                            console.log(info)
+//                            this.deductionCount+=1;
+//                        } else if(challenge.indexOf("attendance") == 0){
+//                            console.log(info)
+//                        } else {
+//                            console.log(info)
+//                        }
+                    }
+                }
+            }
+        });
+    </script>
+</polymer-element>

@@ -1,0 +1,16 @@
+{
+    "snippets" : [
+        {
+            "title" : "Challenges",
+            "data" : "Check up on your activities."
+        },
+        {
+            "title" : "Rewards",
+            "data" : "xp"
+        },
+        {
+            "title" : "Surveys",
+            "data" : "Give us feedback through surveys while earning XP at the same time!"
+        }
+    ]
+}

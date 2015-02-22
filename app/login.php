@@ -13,7 +13,7 @@
         <core-toolbar id="header">
             <center>
                 <h1 style="padding-top: 5px;">DIGITAL ATELIER</h1>
-                <h3>Student Challenge Tracker</h3>
+                <h3>What do you want to create?</h3>
             </center>
         </core-toolbar>
         <br>
@@ -32,6 +32,11 @@
                 <login-window id="login"></login-window>
             </div>
         </div>
+<!--
+        <div id="loginBGImage">
+            <img src="imgs/home1.png">
+        </div>
+-->
     </core-header-panel>
 </body>
 
@@ -58,18 +63,21 @@
                 var color = colors[i];
                 var colorop = colorsop[i];
                 
-                ele.addEventListener("mouseover", function(){
+//                ele.addEventListener("mouseover", function(){
                     ele.style.backgroundColor = color;
                     ele.style.color = colorop;
-                });
+//                });
                 
-                ele.addEventListener("mouseout", function(){
-                    ele.style.backgroundColor = "#e0e0df";
-                    ele.style.color = "black";
-                });
+//                ele.addEventListener("mouseout", function(){
+//                    ele.style.backgroundColor = "#e0e0df";
+//                    ele.style.color = "black";
+//                });
             })();
         }
     }
+    
+    var loginImgIndex = Math.floor(Math.random()*5)
+//    document.getElementById("loginBGImage").src = 'imgs/home'+loginImgIndex+'.png';
 </script>
 
 </html>

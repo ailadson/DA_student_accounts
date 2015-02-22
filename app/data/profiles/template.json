@@ -1,0 +1,7 @@
+{
+    "password" : "-",
+    "isPasswordSet" : false,
+    "loginCounter" : 0,
+    "surveysTaken" : [""],
+    "rewardsClaimed" : [""]
+}

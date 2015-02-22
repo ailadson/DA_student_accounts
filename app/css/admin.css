@@ -1,0 +1,85 @@
+html, body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Cabin', 'Montserrat', sans-serif;
+}
+
+#header {
+    width: 100%;
+    heigth: 1.5em;
+    font-size: 1em;
+    text-align: center;
+    background-color: #f8f0d9;
+    padding-top: .5em;
+    padding-botton: .5em;
+}
+
+#leftBar {
+    width: 20%;
+    float: left;
+    border: 1px solid black;
+    padding: 1em 0 1em 0;
+}
+
+.barItem {
+    text-align: center;
+    width: 100%;
+}
+
+.barItem:hover {
+    background-color: #f8f0d9;
+    cursor: pointer;
+}
+
+/*dvsf*/
+
+body {
+  font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+  font-size: 14px;
+  margin: 0;
+  padding: 24px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+section {
+  padding: 20px 0;
+}
+
+section > div {
+  padding: 14px;
+  font-size: 16px;
+}
+
+html /deep/ paper-dropdown-menu {
+  box-sizing: border-box;
+  width: 170px;
+}
+
+html /deep/ core-menu {
+  box-sizing: border-box;
+  width: 170px;
+}
+
+paper-item {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+html /deep/ core-collapse {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+html /deep/ core-overlay {
+  border: 1px solid #ccc;
+  padding: 8px;
+  background: #fff;
+}
+
+.constrained-height {
+  height: 150px;
+}
+

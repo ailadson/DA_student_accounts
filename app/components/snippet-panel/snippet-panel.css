@@ -1,0 +1,50 @@
+#container {
+    width: 99.25%;
+    margin-bottom: 1px;
+    background-color: #ffe4a8;
+    font-family: 'Cabin', 'Montserrat';
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #431041;
+}
+
+#container:hover{
+    background-color: #e8ce95;
+}
+
+#title {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1.5em;
+    position: relative;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+#titleName {
+    position: absolute;
+    transform: translate(0%,-50%);
+    top: 50%;
+}
+
+#alert {
+    float: right;
+    padding: 0; padding-right: .5em;
+    margin: 0;
+    height: 50%;
+    opacity: 0.3;
+    top: 55%;
+    position: absolute;
+    transform:translate(700%, -50%);
+}
+
+#content {
+    padding-left: 22px;
+    padding-bottom: 5px;
+    width: 90%;
+    font-size: .75em;
+    text-shadow: 0 0 0 black;
+    color: black;
+    text-align: left;
+}

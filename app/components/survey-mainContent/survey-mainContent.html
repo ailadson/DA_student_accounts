@@ -1,0 +1,126 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="survey-mainContent" attributes="surveyTitle onNext onPrev user">
+    <template>
+        <style>
+            #container {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            #title{
+                width: 100%;
+                text-align: center;
+                font-size: 2em;
+                margin: .5em 0 .5em 0;
+            }
+            
+            #innerContainer {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                border: 1px solid black;
+                background: #f7f1de;
+            }
+            
+            #surveyTitle{
+                text-align: center;
+                color: #352d36;
+                font-size: 1em;
+                text-shadow: 0px 0px 0px;
+                margin-bottom: .25em;
+                text-
+            }
+            
+            #prev {
+                float: left;
+                border-radius: 10px 10px 10px 10px;
+                background-color: #f7f1de;
+                border: 0px solid black;
+                font-size: 2em;
+                margin-top: .5em;
+            }
+            
+            #next {
+                float: right;
+                border-radius: 10px 10px 10px 10px;
+                background-color: #f7f1de;
+                border: 0px solid black;
+                font-size: 2em;
+                margin-top: .5em;
+            }
+            
+            #note {
+                margin-bottom: 10px;
+            }
+        </style>
+        <div id=title>Surveys</div>
+        <div id="note">Each survey rewards you with 2 XP per question.</div>
+        <div id="container">
+                <button id="prev">&lang;</button><button id="next">&rang;</button>
+                <div id="innerContainer">
+                    <div id="surveyTitle">{{surveyTitle}}</div>
+                    <a id="link" href="" target="_blank" on-click="{{updateProfile}}"><button>Go To Survey</button></a>
+                </div>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+                'use strict';
+            },
+            eatData : function(data) {
+                this.info = data.info;
+                this.index = data.index
+                this.surveyTitle = data.info[0].title;
+                this.$.link.href = data.info[0].link;
+                this.user = data.content.name;
+                this.surveys = data.content.profile.surveysTaken
+            },
+            onNext : function(){
+                if(this.index - 1 > 0){
+                    this.index -= 1;
+                } else {
+                    this.index = this.info.length;
+                }
+                
+                this.surveyTitle = data.info[this.index].title;
+                this.$.link.href = data.info[this.index].link;
+            },
+            onPrev : function() {
+                if(this.index + 1 < this.info.length){
+                    this.index += 1;
+                } else {
+                    this.index = 0;
+                }
+                
+                this.surveyTitle = data.info[this.index].title;
+                this.$.link.href = data.info[this.index].link;
+            },
+            updateProfile : function(e){
+                var surveys = this.surveys;
+            
+                if(surveys.indexOf(this.surveyTitle) != -1) { 
+                    e.preventDefault(); 
+                    alert("You already took this survey.");
+                    return 
+                }
+                
+                $.ajax({
+                    type : 'POST',
+                    url : 'survey.php',
+                    data : {
+                        name : this.surveyTitle
+                    },
+                    success : function(r){
+                        console.log(r);
+                    }
+                })
+            }
+            
+        });
+    </script>
+</polymer-element>

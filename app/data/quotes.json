@@ -1,0 +1,129 @@
+{
+    "quotes" : [
+        {
+            "quote" : "Go confidently in the direction of your dreams. Live the life you have imagined.",
+            "by" : "Henry David Thoreau",
+            "link" : "http://en.wikipedia.org/wiki/Henry_David_Thoreau"
+        },
+        {
+            "quote" : "Life is not a problem to be solved, but a reality to be experienced.",
+            "by" : "Kierkegaard",
+            "link" : "http://en.wikipedia.org/wiki/Søren_Kierkegaard"
+        },
+        {
+            "quote" : "Your time is limited, so don’t waste it living someone else’s life.",
+            "by" : "Steve Jobs",
+            "link" : "http://en.wikipedia.org/wiki/Steve_Jobs"
+        },
+        {
+            "quote" : "Be happy for this moment. This moment is your life.",
+            "by" : "Omar Khayyan",
+            "link" : "http://en.wikipedia.org/wiki/Omar_Khayyám"
+        },
+        {
+            "quote" : "Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.",
+            "by" : "Albert Einstein",
+            "link" : "http://en.wikipedia.org/wiki/Albert_Einstein"
+        },
+        {
+            "quote" : "I can't understand why people are frightened of new ideas. I'm frightened of the old ones.",
+            "by" : "John Cage",
+            "link" : "http://en.wikipedia.org/wiki/John_Cage"
+        },
+        {
+            "quote" : "If you want to go fast, go alone. If you want to go far, go together.",
+            "by" : "African Proverb",
+            "link" : "http://en.wikipedia.org/wiki/Proverb"
+        },
+        {
+            "quote" : "The weak can never forgive. Forgiveness is the attribute of the strong.",
+            "by" : "Mahatma Ghandhi",
+            "link" : "http://en.wikipedia.org/wiki/Mahatma_Gandhi"
+        },
+        {
+            "quote" : "If you don't know where you are going, any road will get you there.",
+            "by" : "Lewis Carroll",
+            "link" : "http://en.wikipedia.org/wiki/Lewis_Carroll"
+        },
+        {
+            "quote" : "Laughter and tears are both responses to frustration and exhaustion. I myself prefer to laugh, since there is less cleaning up to do afterward.",
+            "by" : "Kurt Vonnegut",
+            "link" : "http://en.wikipedia.org/wiki/Henry_David_Thoreau"
+        },
+        {
+            "quote" : "If there is a book that you want to read, but it hasn't been written yet, you must be the one to write it.",
+            "by" : "Toni Morrison",
+            "link" : "http://en.wikipedia.org/wiki/Toni_Morrison"
+        },
+        {
+            "quote" : "This is not a rehersal, this is your life.",
+            "by" : "Maya Angelou",
+            "link" : "http://en.wikipedia.org/wiki/Maya_Angelou"
+        },
+        {
+            "quote" : "Don't cry because it's over. Smile because it happened.",
+            "by" : "Dr. Seuss",
+            "link" : "http://en.wikipedia.org/wiki/Dr_Seuss"
+        },
+        {
+            "quote" : "I have no special talents. I am only passionately curious.",
+            "by" : "Albert Einstein",
+            "link" : "http://en.wikipedia.org/wiki/Albert_Einstein"
+        },
+        {
+            "quote" : "Satisfaction of one’s curiosity is one of the greatest sources of happiness in life.",
+            "by" : "Dr. Linus Pauling",
+            "link" : "http://en.wikipedia.org/wiki/Linus_Pauling"
+        },
+        {
+            "quote" : "The cure for boredom is curiosity. There is no cure for curiosity.",
+            "by" : "Dorothy Parker",
+            "link" : "http://en.wikipedia.org/wiki/Dorothy_Parker"
+        },
+        {
+            "quote" : "Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars...to change the world.",
+            "by" : "Harriet Tubman",
+            "link" : "http://en.wikipedia.org/wiki/Harriet_Tubman"
+        },
+        {
+            "quote" : "Follow your passion, be prepared to work hard and sacrifice, and, above all, don't let anyone limit your dreams.",
+            "by" : "Donovan Bailey",
+            "link" : "http://en.wikipedia.org/wiki/Donovan_Bailey"
+        },
+        {
+            "quote" : "There is no passion to be found playing small - in settling for a life that is less than the one you are capable of living.",
+            "by" : "Nelson Mandela",
+            "link" : "http://en.wikipedia.org/wiki/Nelson_Mandela"
+        },
+        {
+            "quote" : "It’s your place in the world; it’s your life. Go on and do all you can with it, and make it the life you want to live.",
+            "by" : "Mae Jemison",
+            "link" : "http://en.wikipedia.org/wiki/Mae_Jemison"
+        },
+        {
+            "quote" : "Discipline is the bridge between goals and accomplishment.",
+            "by" : "Jim Rohn",
+            "link" : "http://en.wikipedia.org/wiki/Jim_Rohn"
+        },
+        {
+            "quote" : "Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep.",
+            "by" : "Scott Adams",
+            "link" : "http://en.wikipedia.org/wiki/Scott_Adams"
+        },
+        {
+            "quote" : "If you hear a voice within you say 'you cannot paint,' then by all means paint, and that voice will be silenced.",
+            "by" : "Vincent Van Gogh",
+            "link" : "en.wikipedia.org/wiki/Vincent_van_Gogh"
+        },
+        {
+            "quote" : "If you're changing the world, you're working on important things. You're excited to get up in the morning.",
+            "by" : "Larry Page",
+            "link" : "en.wikipedia.org/wiki/Larry_Page"
+        },
+        {
+            "quote" : "There is no greater education than one that is self-driven.",
+            "by" : "Neil deGrasse Tyson",
+            "link" : "en.wikipedia.org/wiki/Neil_deGrasse_Tyson"
+        }
+    ]
+}

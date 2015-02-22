@@ -1,0 +1,45 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="snippet-panel" attributes="mainContent handleClick alert titleName" on-click="{{handleClick}}">
+    <template>
+        <link rel="stylesheet" href="snippet-panel.css" type="text/css">
+        
+        <div id="container">
+            <div id="title">
+                <span id="titleName">{{titleName}}</span>
+                <img src="imgs/alert0.png" id="alert">
+            </div>
+            <div id="content">
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+                'use strict';
+            },
+            eatData: function(config){
+                this.$.titleName.innerHTML = config.title;
+                this.$.content.innerHTML = config.data;
+                
+                if(config.newAlert){
+                    this.$.alert.src = "components/snippet-panel/imgs/alert1.png";
+                    this.$.alert.style.opacity = 1;
+                } else {
+                    this.$.alert.src = "components/snippet-panel/imgs/alert0.png";
+                } 
+                
+                var mainContentHTML = "<"+config.mainContent+" "+(config.mainAttributes || "" )+"></"+config.mainContent+">"
+                this.mainContent = mainContentHTML;
+            },
+            handleClick: function(){
+                console.log("clicked");
+            },
+            alertChanged : function(){
+                 if(this.alert == 'none'){
+                    this.$.alert.style.display = "none";
+                }
+            }
+        });
+    </script>
+</polymer-element>

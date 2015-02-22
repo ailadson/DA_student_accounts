@@ -1,0 +1,63 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../rewards-panel/rewards-panel.html">
+
+<polymer-element name="rewards-mainContent">
+    <template>
+<!--        <link rel="stylesheet" href="rewards-mainContent.css" type="text/css">-->
+        <style>
+            #body {
+                overflow-y: scroll;
+            }
+            
+            .rewards-header {
+                width: 100%;
+                font-size: 2em;
+                margin-top: .5em;
+            }
+            
+        </style>
+        <div id="body">
+            <div class="rewards-header">Eligible Rewards</div>
+            <div id="eligible"></div>
+            <div class="rewards-header">Other Rewards</div>
+            <div id="other"></div>
+        </div>
+    </template>
+    <script src="reward.js" type="text/javascript"></script>
+    <script>
+        Polymer({
+            ready: function() {
+                'use strict';
+            },
+            packData : function(xp, challengeInfo){
+                var rewards = this.createRewards(challengeInfo);
+                var eligible = this.$.eligible;
+                var other = this.$.other;
+                
+                for(var i = 0; i<rewards.length; i += 1){
+                    var content = rewards[i].createContent(xp);
+                    content.setProgressBar();
+                    
+                    var isEligible = content.isEligible();
+                    if(isEligible){
+                        content.makeEligible();
+                        eligible.appendChild(content);
+                    } else {
+                        other.appendChild(content);
+                    }
+                }
+            },
+            createRewards: function(challenges){
+                var rewards = [];
+                for(reward in challenges){
+                    if(reward.indexOf("rewards") != -1){
+                        var r = challenges[reward];
+                        var reward = new Reward(r);
+                        rewards.push(reward);
+                    }
+                }
+                return rewards;
+            }
+        });
+    </script>
+</polymer-element>
